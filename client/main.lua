@@ -1170,6 +1170,14 @@ Citizen.CreateThread(function()
 				end)
 			end
 		end
+			
+		--Immediately close on pause menu open.
+		if RageUI.Visible() then
+			if (IsControlJustPressed(0, 199) or IsControlJustPressed(0, 200)) then
+				RageUI.CloseAll()
+				ESX.UI.Menu.CloseAll()
+			end
+		end
 
 		if RageUI.Visible(RMenu.Get('rageui', 'personal')) then
 			RenderPersonalMenu()
