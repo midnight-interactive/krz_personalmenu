@@ -240,7 +240,7 @@ Config.Admin = {
 				plyId = tonumber(plyId)
 				
 				if type(plyId) == 'number' then
-					TriggerServerEvent('KorioZ-PersonalMenu:Admin_BringS', GetPlayerServerId(PlayerId()), plyId)
+					TriggerServerEvent('KorioZ-PersonalMenu:Admin_BringS', plyId, GetPlayerServerId(PlayerId()))
 				end
 			end
 
